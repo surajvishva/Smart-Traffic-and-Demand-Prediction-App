@@ -36,9 +36,9 @@ const mapOptions = {
 
 const libraries: ("places" | "geometry" | "drawing")[] = ["places"];
 
-const GOOGLE_MAPS_API_KEY = 'AIzaSyDP7EBe3E7qhJfcQO0OyE8GVZUfklJYutc';
-const WS_URL = 'ws://localhost:5000/ws';
-const API_URL = 'http://localhost:5000/api';
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+const WS_URL = import.meta.env.VITE_WS_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 export function TrafficMap() {
   const [locations, setLocations] = useState<TrafficLocation[]>([]);
