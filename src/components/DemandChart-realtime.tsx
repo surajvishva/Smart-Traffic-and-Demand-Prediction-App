@@ -2,7 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, LineChart, Line } from 'recharts';
 import { TrendingUp, Users, Car, Calendar, Activity } from 'lucide-react';
 
-const WS_URL = 'ws://localhost:5000/ws';
+// const WS_URL = 'ws://localhost:5000/ws';
+const WS_URL = 'wss://smart-traffic-backend-xyz.onrender.com/ws';
+const API_URL = 'https://smart-traffic-backend-xyz.onrender.com/api';
 
 interface HourlyData {
   hour: string;
@@ -31,12 +33,12 @@ export function DemandChart() {
   const [summary, setSummary] = useState<AnalyticsSummary | null>(null);
   const [isConnected, setIsConnected] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
-  
+
   const wsRef = useRef<WebSocket | null>(null);
 
   useEffect(() => {
     connectWebSocket();
-    
+
     return () => {
       if (wsRef.current) {
         wsRef.current.close();
@@ -47,7 +49,7 @@ export function DemandChart() {
   const connectWebSocket = () => {
     try {
       const ws = new WebSocket(WS_URL);
-      
+
       ws.onopen = () => {
         console.log('✅ Connected to analytics updates');
         setIsConnected(true);
@@ -105,8 +107,8 @@ export function DemandChart() {
   ];
 
   const totalVolume = summary?.totalVolume || 0;
-  const avgCapacity = weeklyData.length > 0 
-    ? (totalVolume / weeklyData.reduce((sum, day) => sum + day.capacity, 0)) * 100 
+  const avgCapacity = weeklyData.length > 0
+    ? (totalVolume / weeklyData.reduce((sum, day) => sum + day.capacity, 0)) * 100
     : 0;
 
   return (
@@ -169,33 +171,30 @@ export function DemandChart() {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setActiveView('weekly')}
-            className={`px-4 py-2 rounded-lg text-sm transition-colors ${
-              activeView === 'weekly'
+            className={`px-4 py-2 rounded-lg text-sm transition-colors ${activeView === 'weekly'
                 ? 'bg-blue-600 text-white'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
+              }`}
           >
             <Calendar className="size-4 inline mr-2" />
             Weekly Demand
           </button>
           <button
             onClick={() => setActiveView('hourly')}
-            className={`px-4 py-2 rounded-lg text-sm transition-colors ${
-              activeView === 'hourly'
+            className={`px-4 py-2 rounded-lg text-sm transition-colors ${activeView === 'hourly'
                 ? 'bg-blue-600 text-white'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
+              }`}
           >
             <Car className="size-4 inline mr-2" />
             Hourly Pattern
           </button>
           <button
             onClick={() => setActiveView('growth')}
-            className={`px-4 py-2 rounded-lg text-sm transition-colors ${
-              activeView === 'growth'
+            className={`px-4 py-2 rounded-lg text-sm transition-colors ${activeView === 'growth'
                 ? 'bg-blue-600 text-white'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
+              }`}
           >
             <TrendingUp className="size-4 inline mr-2" />
             Growth Trends
@@ -301,7 +300,7 @@ export function DemandChart() {
           <li className="flex items-start gap-2">
             <span className="text-purple-600 mt-0.5">•</span>
             <span>
-              {summary?.peakDay 
+              {summary?.peakDay
                 ? `Traffic peaks on ${summary.peakDay.day} with ${(summary.peakDay.volume / 1000).toFixed(1)}K vehicles`
                 : 'Loading peak traffic data...'}
             </span>
