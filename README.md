@@ -2,8 +2,6 @@
 
 A modern React application for real-time traffic prediction and visualization with Google Maps integration.
 
-Original Figma design: https://www.figma.com/design/iB6lpKgbmE9PYTE0eIXFUk/Smart-Traffic-Prediction-App
-
 ## 🚀 Features
 
 - **Live Traffic Map** - Real-time traffic visualization using Google Maps
