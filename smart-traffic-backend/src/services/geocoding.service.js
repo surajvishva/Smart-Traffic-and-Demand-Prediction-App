@@ -8,7 +8,7 @@ export class GeocodingService {
 
   async geocodeAddress(address) {
     try {
-      if (!this.apiKey || this.apiKey === 'AIzaSyDP7EBe3E7qhJfcQO0OyE8GVZUfklJYutc') {
+      if (!this.apiKey || this.apiKey === 'AIzaSyDSjnU4sxtwRNTk-88IghsdfVcx0YShHBY') {
         // Return mock data when API key is not configured
         return this.getMockGeocodeResult(address);
       }
@@ -53,7 +53,7 @@ export class GeocodingService {
 
   async reverseGeocode(lat, lng) {
     try {
-      if (!this.apiKey || this.apiKey === 'AIzaSyDP7EBe3E7qhJfcQO0OyE8GVZUfklJYutc') {
+      if (!this.apiKey || this.apiKey === 'AIzaSyDSjnU4sxtwRNTk-88IghsdfVcx0YShHBY') {
         return this.getMockReverseGeocodeResult(lat, lng);
       }
 
