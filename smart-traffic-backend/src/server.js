@@ -20,7 +20,8 @@ const PORT = process.env.PORT || 5000;
 
 // CORS configuration
 app.use(cors({
-  origin: "https://smart-traffic-and-demand-prediction.vercel.app" || 'http://localhost:3000',
+  //origin: "https://smart-traffic-and-demand-prediction.vercel.app", //|| 'http://localhost:3000',
+  origin: "https://smart-traffic-and-demand-prediction-app-wd3i.onrender.com",
   credentials: true
 }));
 
