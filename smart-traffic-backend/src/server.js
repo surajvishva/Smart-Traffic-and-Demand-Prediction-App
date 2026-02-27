@@ -19,11 +19,26 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // CORS configuration
+// app.use(cors({
+//   //origin: "https://smart-traffic-and-demand-prediction.vercel.app", //|| 'http://localhost:3000',
+//   origin: "https://smart-traffic-and-demand-prediction-app-wd3i.onrender.com",
+//   credentials: true
+// }));
+
+// app.use(cors({
+//   origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+//   credentials: true
+// }));
+
 app.use(cors({
-  //origin: "https://smart-traffic-and-demand-prediction.vercel.app", //|| 'http://localhost:3000',
-  origin: "https://smart-traffic-and-demand-prediction-app-wd3i.onrender.com",
-  credentials: true
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    process.env.FRONTEND_URL,    // Add this line
+  ],
+  credentials: true,
 }));
+
 
 
 // Body parser middleware
