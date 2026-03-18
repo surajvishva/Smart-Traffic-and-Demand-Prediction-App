@@ -133,10 +133,25 @@ Once configured with your API key, the map provides:
 - [React Google Maps API](https://react-google-maps-api-docs.netlify.app/)
 - [Detailed Setup Guide](./GOOGLE_MAPS_SETUP.md)
 
-## 🤝 Contributing
+## 🔎 Outputs
+<img width="1903" height="1034" alt="Screenshot 2026-03-18 172413" src="https://github.com/user-attachments/assets/d2d14a18-cd48-4bbc-8828-32ff0d8a09e3" />
 
-Feel free to submit issues and enhancement requests!
+<img width="1901" height="1034" alt="Screenshot 2026-03-18 172429" src="https://github.com/user-attachments/assets/d4fd12a3-c991-4f98-a7ee-b0f9be3dac1d" />
 
-## 📄 License
+<img width="1920" height="1200" alt="Screenshot 2026-03-18 172444" src="https://github.com/user-attachments/assets/a2a13ab4-50d7-4f1f-ba9d-eb55b20e3138" />
 
-This project is for educational and demonstration purposes.
+<img width="1920" height="1200" alt="Screenshot 2026-03-18 172452" src="https://github.com/user-attachments/assets/ed2629ad-8796-454e-b890-3018c2667feb" />
+
+<img width="1920" height="1200" alt="Screenshot 2026-03-18 172517" src="https://github.com/user-attachments/assets/af658979-7cd3-4a13-bae2-8cc8ccc4de5f" />
+
+<img width="1920" height="1200" alt="Screenshot 2026-03-18 172524" src="https://github.com/user-attachments/assets/8eedcf88-ddb7-4262-af92-05115be432af" />
+
+<img width="1920" height="1200" alt="Screenshot 2026-03-18 172557" src="https://github.com/user-attachments/assets/b0fb0d46-d616-4559-87fd-8976df5e01eb" 
+   />
+<img width="1920" height="1200" alt="Screenshot 2026-03-18 172548" src="https://github.com/user-attachments/assets/5ef1fd8a-969b-41f2-82bc-b336c28a99ef" />
+
+<img width="1920" height="1200" alt="Screenshot 2026-03-18 172540" src="https://github.com/user-attachments/assets/9ddbc5de-4fc6-4dde-aca6-dcec5a92a483" />
+
+
+
+
